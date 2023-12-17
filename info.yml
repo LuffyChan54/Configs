@@ -1,4 +1,0 @@
-info:
-  name: ${HUYNAME}
-  age: ${HUYAGE}
-  sex: ${HUYSEX}

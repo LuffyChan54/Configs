@@ -1,0 +1,18 @@
+server:
+  port: ${AUTH_PORT}
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${AUTHDB_URL}
+    username: ${AUTHDB_USERNAME}
+    password: ${AUTHDB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: ${DDL_AUTO:update}
+    show-sql: true
+myvars:
+  jwt:
+    access_key: ${ACCESS_KEY}
+    refresh_key: ${REFRESH_KEY}
+    access_expiration: ${ACCESS_EXPIRATION:60000}
+    refresh_expirations: ${REFRESH_EXPIRATION:1440000}

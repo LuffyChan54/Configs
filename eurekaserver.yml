@@ -13,7 +13,7 @@ eureka:
     fetchRegistry: false
     registerWithEureka: false
     serviceUrl:
-      defaultZone: ${EUREKA_HOST}:${EUREKA_ZONE_PORT}/eureka/
+      defaultZone: ${EUREKA_HOST}:${EUREKA_PORT}/eureka/
 
 management:
   endpoints:

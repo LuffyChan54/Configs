@@ -1,0 +1,31 @@
+server:
+  port: ${EUREKA_PORT}
+spring:
+  rabbitmq:
+    host: ${RABBIT_MQ_URL}
+    port: ${RABBIT_MQ_PORT}
+    username: ${RABBIT_MQ_USERNAME}
+    password: ${RABBIT_MQ_PASSWORD}
+eureka:
+  instance:
+    hostname: ${EUREKA_HOST}
+  client:
+    fetchRegistry: false
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: ${EUREKA_HOST}:${EUREKA_PORT}/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true

@@ -1,0 +1,39 @@
+server:
+  port: ${DETAIL_PORT}
+spring:
+  rabbitmq:
+    host: ${RABBIT_MQ_URL}
+    port: ${RABBIT_MQ_PORT}
+    username: ${RABBIT_MQ_USERNAME}
+    password: ${RABBIT_MQ_PASSWORD}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
+endpoint:
+  shutdown:
+    enabled: true
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone:
+info:
+  app:
+    name: ${APP_NAME}
+    description: ${APP_DESCRIPTION}
+    version: ${APP_VERSION}
+
+huy:
+  nickname: ${HUY_NICKNAME}
+  name: ${HUY_NAME}

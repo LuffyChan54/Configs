@@ -7,6 +7,8 @@ spring:
     username: ${RABBIT_MQ_USERNAME}
     password: ${RABBIT_MQ_PASSWORD}
 eureka:
+  dashboard:
+    path: /dashboard
   instance:
     hostname: ${EUREKA_HOST}
   client:

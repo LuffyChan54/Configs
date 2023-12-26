@@ -27,7 +27,7 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone:
+      defaultZone: ${EUREKA_HOST}
 info:
   app:
     name: ${APP_NAME}
